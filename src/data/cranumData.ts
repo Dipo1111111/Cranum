@@ -1,4 +1,4 @@
-import { CranumHabit } from '../types/habit';
+import { CranumHabit, BiologicalStack } from '../types/habit';
 
 export const CRANUM_HABITS: CranumHabit[] = [
     // CATEGORY A: ACTIVE HABITS (Daily/Weekly Checkable)
@@ -16,7 +16,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'morning',
         tips: 'Foundation for all bone development.',
-        priority: 5
+        priority: 5,
+        phase: 1,
     },
     {
         id: 'A002',
@@ -32,7 +33,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 3,
         timeOfDay: 'morning',
         tips: 'Do wall angels between sets.',
-        priority: 5
+        priority: 5,
+        phase: 1,
     },
     {
         id: 'A003',
@@ -48,7 +50,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 3,
         timeOfDay: 'morning',
         tips: 'Hear faint creaking = success.',
-        priority: 5
+        priority: 5,
+        phase: 2,
     },
     {
         id: 'A004',
@@ -64,7 +67,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'morning',
         tips: 'Do before tongue chewing.',
-        priority: 4
+        priority: 4,
+        phase: 2,
     },
     {
         id: 'A005',
@@ -80,7 +84,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 10,
         timeOfDay: 'throughout_day',
         tips: 'Trigger: phone pick-up.',
-        priority: 4
+        priority: 4,
+        phase: 3,
+        fatigueCost: 5,
+        recoveryTimeHours: 24,
+        muscleGroup: 'neck',
     },
     {
         id: 'A006',
@@ -96,7 +104,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 2,
         timeOfDay: 'night',
         tips: 'Do before sleep.',
-        priority: 3
+        priority: 3,
+        phase: 3,
     },
     {
         id: 'A007',
@@ -112,7 +121,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'night',
         tips: 'Consistent application is key.',
-        priority: 2
+        priority: 2,
+        phase: 3,
     },
     {
         id: 'A008',
@@ -128,7 +138,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 30,
         timeOfDay: 'morning',
         tips: 'Builds solar callus.',
-        priority: 5
+        priority: 5,
+        phase: 1,
     },
     {
         id: 'A009',
@@ -144,7 +155,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 30,
         timeOfDay: 'throughout_day',
         tips: 'Timed reminder in evening.',
-        priority: 3
+        priority: 3,
+        phase: 1,
     },
     {
         id: 'A010',
@@ -160,7 +172,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 2,
         timeOfDay: 'morning',
         tips: 'Preps for thumb pulling.',
-        priority: 3
+        priority: 3,
+        phase: 2,
     },
     {
         id: 'A011',
@@ -176,7 +189,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 2,
         timeOfDay: 'morning',
         tips: 'Do before cranial work.',
-        priority: 3
+        priority: 3,
+        phase: 2,
+        fatigueCost: 4,
+        recoveryTimeHours: 24,
+        muscleGroup: 'fascia',
     },
     {
         id: 'A012',
@@ -192,7 +209,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'morning',
         tips: 'Part of morning prep.',
-        priority: 4
+        priority: 4,
+        phase: 2,
     },
     {
         id: 'A013',
@@ -208,7 +226,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'morning',
         tips: 'Essential for alignment.',
-        priority: 4
+        priority: 4,
+        phase: 1,
     },
     {
         id: 'A014',
@@ -224,7 +243,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'morning',
         tips: 'Stabilizes base.',
-        priority: 4
+        priority: 4,
+        phase: 1,
     },
     {
         id: 'A015',
@@ -240,7 +260,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 5,
         timeOfDay: 'morning',
         tips: 'Advanced.',
-        priority: 3
+        priority: 3,
+        phase: 3,
+        fatigueCost: 7,
+        recoveryTimeHours: 48,
+        muscleGroup: 'neck',
     },
     {
         id: 'A016',
@@ -256,7 +280,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 0,
         timeOfDay: 'throughout_day',
         tips: 'Practice during every meal.',
-        priority: 4
+        priority: 4,
+        phase: 3,
     },
     {
         id: 'A017',
@@ -272,7 +297,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 3,
         timeOfDay: 'morning',
         tips: 'Pre-meal drill.',
-        priority: 3
+        priority: 3,
+        phase: 2,
     },
     {
         id: 'A018',
@@ -288,7 +314,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 0,
         timeOfDay: 'throughout_day',
         tips: 'Advanced mastication.',
-        priority: 4
+        priority: 4,
+        phase: 3,
+        fatigueCost: 6,
+        recoveryTimeHours: 24,
+        muscleGroup: 'masseters',
     },
     {
         id: 'A019',
@@ -304,7 +334,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 15,
         timeOfDay: 'throughout_day',
         tips: 'Trigger: commute.',
-        priority: 4
+        priority: 4,
+        phase: 3,
+        fatigueCost: 8,
+        recoveryTimeHours: 48,
+        muscleGroup: 'masseters',
     },
     {
         id: 'A020',
@@ -320,7 +354,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'morning',
         tips: 'Morning routine.',
-        priority: 3
+        priority: 3,
+        phase: 1,
     },
     {
         id: 'A021',
@@ -336,7 +371,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'night',
         tips: 'Use medical tape.',
-        priority: 4
+        priority: 4,
+        phase: 3,
     },
     {
         id: 'A022',
@@ -352,7 +388,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 5,
         timeOfDay: 'morning',
         tips: 'Reduces morning bloat.',
-        priority: 3
+        priority: 3,
+        phase: 3,
     },
     {
         id: 'A023',
@@ -368,7 +405,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 2,
         timeOfDay: 'night',
         tips: 'Use cold stone.',
-        priority: 3
+        priority: 3,
+        phase: 2,
     },
     {
         id: 'A024',
@@ -384,7 +422,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 15,
         timeOfDay: 'throughout_day',
         tips: 'Prime time for stretching.',
-        priority: 3
+        priority: 3,
+        phase: 3,
+        fatigueCost: 6,
+        recoveryTimeHours: 24,
+        muscleGroup: 'lymphatic',
     },
     {
         id: 'A025',
@@ -400,7 +442,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1440,
         timeOfDay: 'throughout_day',
         tips: 'Sunday protocol.',
-        priority: 5
+        priority: 5,
+        phase: 3,
+        fatigueCost: 9,
+        recoveryTimeHours: 72,
+        muscleGroup: 'cns',
     },
     {
         id: 'A026',
@@ -416,7 +462,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'morning',
         tips: 'Growth factor boost.',
-        priority: 4
+        priority: 4,
+        phase: 3,
     },
     {
         id: 'A027',
@@ -432,7 +479,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 10,
         timeOfDay: 'throughout_day',
         tips: 'Nature reset.',
-        priority: 4
+        priority: 4,
+        phase: 1,
     },
     {
         id: 'A028',
@@ -448,7 +496,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1440,
         timeOfDay: 'throughout_day',
         tips: 'Fat loss without crash.',
-        priority: 5
+        priority: 5,
+        phase: 1,
     },
     {
         id: 'A029',
@@ -464,7 +513,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 5,
         timeOfDay: 'morning',
         tips: 'Fixes posture height.',
-        priority: 4
+        priority: 4,
+        phase: 1,
     },
     {
         id: 'A030',
@@ -480,7 +530,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 3,
         timeOfDay: 'morning',
         tips: 'Glute isolation.',
-        priority: 4
+        priority: 4,
+        phase: 1,
     },
     {
         id: 'A031',
@@ -496,7 +547,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 2,
         timeOfDay: 'morning',
         tips: 'Foundation for curls.',
-        priority: 3
+        priority: 3,
+        phase: 1,
     },
     {
         id: 'A032',
@@ -512,7 +564,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 10,
         timeOfDay: 'morning',
         tips: 'Systematic rolling.',
-        priority: 4
+        priority: 4,
+        phase: 2,
     },
     {
         id: 'A033',
@@ -528,7 +581,11 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 5,
         timeOfDay: 'morning',
         tips: 'Athletic potential.',
-        priority: 4
+        priority: 4,
+        phase: 3,
+        fatigueCost: 8,
+        recoveryTimeHours: 48,
+        muscleGroup: 'cns',
     },
     {
         id: 'A034',
@@ -544,7 +601,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'night',
         tips: 'Resets chin profile.',
-        priority: 4
+        priority: 4,
+        phase: 3,
     },
     {
         id: 'A035',
@@ -560,7 +618,8 @@ export const CRANUM_HABITS: CranumHabit[] = [
         durationMinutes: 1,
         timeOfDay: 'throughout_day',
         tips: 'Jaw advancement drill.',
-        priority: 4
+        priority: 4,
+        phase: 1,
     },
 
     // CATEGORY C: CONTINUOUS HABITS (Reminders)
@@ -812,5 +871,49 @@ export const CRANUM_HABITS: CranumHabit[] = [
         tips: 'Consult professional.',
         priority: 4,
         article: '# Fix Bowleggedness\nBowlegs reduce height and cause asymmetry.\n\n### Common Fixes\n1. External hip rotation strengthening\n2. Focused foot arch work\n3. Consistent posture checks\n4. Professional assessment for extreme cases'
+    }
+];
+
+
+export const CRANUM_STACKS: BiologicalStack[] = [
+    {
+        id: 'S001',
+        name: 'The Morning Primer',
+        description: 'Awaken the fascia and align the cervical spine before any cranial work. Essential foundation.',
+        phase: 1,
+        timeOfDay: 'morning',
+        habitIds: ['A013', 'A014', 'A002', 'A020'] // Forward Fold -> Neck Retract -> Chin Tucks -> CPS
+    },
+    {
+        id: 'S002',
+        name: 'The Osteo Unlocking',
+        description: 'Release the soft tissue on the palate, then apply gentle sutural tension to expand over time.',
+        phase: 2,
+        timeOfDay: 'morning',
+        habitIds: ['A010', 'A003'] // Palate Massage -> Thumb Pulling
+    },
+    {
+        id: 'S003',
+        name: 'Masseter Hypertrophy',
+        description: 'Build the mind-muscle connection, then apply heavy resistance to hypertrophy the masseters.',
+        phase: 3,
+        timeOfDay: 'throughout_day',
+        habitIds: ['A017', 'A019'] // Front-Teeth Practice -> Mastic Gum
+    },
+    {
+        id: 'S004',
+        name: 'Evening Release',
+        description: 'Prepare the face and nervous system for restorative sleep and passive changes.',
+        phase: 1,
+        timeOfDay: 'night',
+        habitIds: ['A023', 'A006'] // Gua Sha -> Eye Resistance
+    },
+    {
+        id: 'S005',
+        name: 'Max Growth Spurt',
+        description: 'Tax the CNS, spike growth hormone naturally, then recover.',
+        phase: 3,
+        timeOfDay: 'morning',
+        habitIds: ['A033', 'A026'] // Sprints -> Colostrum
     }
 ];

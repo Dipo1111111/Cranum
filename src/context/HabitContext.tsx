@@ -2,9 +2,9 @@ import React, { createContext, useContext, useState, useEffect, useMemo, useCall
 import { format } from 'date-fns';
 import { supabase } from '../lib/supabase';
 import { useAuth } from '../context/AuthContext';
-import { CranumHabit, CranumGoal } from '../types/habit';
-import { generateWeeklySchedule, DailyPlan } from '../lib/scheduler';
-import { CRANUM_HABITS } from '../data/cranumData';
+import { CranumHabit, CranumGoal, CranumPhase } from '../types/habit';
+import { generateDailyPrescription, DailyPlan, StackPrescription } from '../lib/scheduler';
+import { CRANUM_HABITS, CRANUM_STACKS } from '../data/cranumData';
 
 interface HabitContextType {
     selectedGoals: CranumGoal[];
@@ -18,6 +18,8 @@ interface HabitContextType {
     schedule: Record<string, DailyPlan>;
     todayPlan: DailyPlan;
     warnings: string[];
+    currentPhase: CranumPhase;
+    primaryGoal: CranumGoal | null;
     stats: {
         activeTasks: number;
         activeMinutes: number;
@@ -35,9 +37,11 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
     const [selectedGoals, setSelectedGoalsState] = useState<CranumGoal[]>([]);
     const [completions, setCompletions] = useState<string[]>([]);
     const [history, setHistory] = useState<Record<string, string[]>>({});
+    const [currentPhase, setCurrentPhase] = useState<CranumPhase>(1);
     const [loading, setLoading] = useState(true);
 
     const todayStr = useMemo(() => format(new Date(), 'yyyy-MM-dd'), []);
+    const primaryGoal = selectedGoals.length > 0 ? selectedGoals[0] : null;
 
     // Filter habits based on selected goals
     const allHabits = useMemo(() => {
@@ -50,18 +54,14 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
     const reminderHabits = useMemo(() => allHabits.filter(h => h.category === 'continuous'), [allHabits]);
     const lifestyleArticles = useMemo(() => allHabits.filter(h => h.category === 'lifestyle'), [allHabits]);
 
-    // Generate schedule once
-    const { schedule, warnings } = useMemo(() => {
-        const weeklySchedule = generateWeeklySchedule(activeHabits, history);
+    // Generate prescription for today
+    const { todayPlan, warnings } = useMemo(() => {
+        const plan = generateDailyPrescription(CRANUM_HABITS, history, primaryGoal, currentPhase, CRANUM_STACKS);
         return {
-            schedule: weeklySchedule.days,
-            warnings: weeklySchedule.warnings
+            todayPlan: plan,
+            warnings: plan.warnings
         };
-    }, [activeHabits, history]);
-
-    const todayPlan: DailyPlan = useMemo(() =>
-        schedule[todayStr] || { morning: [], night: [], totalMinutes: 0, warnings: [] },
-        [schedule, todayStr]);
+    }, [history, primaryGoal, currentPhase]);
 
     const fetchData = useCallback(async () => {
         if (!user) return;
@@ -115,13 +115,13 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
     const toggleGoal = async (goalId: CranumGoal) => {
         if (!user) return;
         const isSelected = selectedGoals.includes(goalId);
-        if (isSelected) {
-            setSelectedGoalsState(prev => prev.filter(id => id !== goalId));
-            await supabase.from('user_goals').delete().eq('user_id', user.id).eq('goal_id', goalId);
-        } else {
-            setSelectedGoalsState(prev => [...prev, goalId]);
-            await supabase.from('user_goals').insert([{ user_id: user.id, goal_id: goalId }]);
-        }
+
+        if (isSelected) return; // Cannot deselect the only primary goal
+
+        // Clear existing and set new primary target
+        setSelectedGoalsState([goalId]);
+        await supabase.from('user_goals').delete().eq('user_id', user.id);
+        await supabase.from('user_goals').insert([{ user_id: user.id, goal_id: goalId }]);
     };
 
     const completionRate = useMemo(() => {
@@ -147,9 +147,11 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
         activeHabits,
         reminderHabits,
         lifestyleArticles,
-        schedule,
+        schedule: {}, // deprecated weekly schedule
         todayPlan,
         warnings,
+        currentPhase,
+        primaryGoal,
         stats,
         toggleHabit,
         toggleGoal,

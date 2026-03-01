@@ -6,6 +6,17 @@ export type TimeOfDay = 'morning' | 'throughout_day' | 'night';
 
 export type CranumCategory = 'active' | 'continuous' | 'lifestyle';
 
+export type CranumPhase = 1 | 2 | 3; // 1: Foundation, 2: Unlocking, 3: Hypertrophy
+
+export interface BiologicalStack {
+  id: string;
+  name: string;
+  description: string;
+  phase: CranumPhase;
+  timeOfDay: TimeOfDay;
+  habitIds: string[]; // Sequential habits
+}
+
 export interface CranumHabit {
   id: string;
   category: CranumCategory;
@@ -22,7 +33,14 @@ export interface CranumHabit {
   tips: string;
   priority: number;
   article?: string; // For Category L Lifestyle Principles
+
+  // Biological Load Tracking
+  phase?: CranumPhase;
+  fatigueCost?: number; // 1-10 scale
+  recoveryTimeHours?: number; // How long until safe to train again
+  muscleGroup?: 'masseters' | 'neck' | 'cns' | 'fascia' | 'lymphatic';
 }
+
 
 export interface DayData {
   id: string;

@@ -32,9 +32,9 @@ export function GoalSelector() {
     return (
         <div className="space-y-6 pb-10">
             <div className="space-y-2">
-                <h2 className="text-sm font-black uppercase tracking-widest text-primary">Identity Selection</h2>
+                <h2 className="text-sm font-black uppercase tracking-widest text-primary">Primary Target Selection</h2>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                    Select the goals you want to prioritize. Our engine will build a custom schedule that maximizes results while preventing burnout.
+                    Select ONE primary goal to spearhead your progress. Our engine will prescribe a phased biological stack designed specifically for this target.
                 </p>
             </div>
 
