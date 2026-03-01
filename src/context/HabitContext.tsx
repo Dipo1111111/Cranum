@@ -19,13 +19,13 @@ interface HabitContextType {
     todayPlan: DailyPlan;
     warnings: string[];
     currentPhase: CranumPhase;
+    phaseProgress: { currentStreak: number, requiredDays: number };
     primaryGoal: CranumGoal | null;
     stats: {
         activeTasks: number;
         activeMinutes: number;
     };
-    toggleHabit: (habitId: string) => Promise<void>;
-    toggleGoal: (goalId: CranumGoal) => Promise<void>;
+    setGoalsHierarchy: (goals: CranumGoal[]) => Promise<void>;
     setSelectedGoals: (goals: CranumGoal[]) => void;
     completionRate: number;
 }
@@ -38,6 +38,7 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
     const [completions, setCompletions] = useState<string[]>([]);
     const [history, setHistory] = useState<Record<string, string[]>>({});
     const [currentPhase, setCurrentPhase] = useState<CranumPhase>(1);
+    const [phaseProgress, setPhaseProgress] = useState({ currentStreak: 0, requiredDays: 14 });
     const [loading, setLoading] = useState(true);
 
     const todayStr = useMemo(() => format(new Date(), 'yyyy-MM-dd'), []);
@@ -56,21 +57,25 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
 
     // Generate prescription for today
     const { todayPlan, warnings } = useMemo(() => {
-        const plan = generateDailyPrescription(CRANUM_HABITS, history, primaryGoal, currentPhase, CRANUM_STACKS);
+        const plan = generateDailyPrescription(CRANUM_HABITS, history, selectedGoals, currentPhase, CRANUM_STACKS);
         return {
             todayPlan: plan,
             warnings: plan.warnings
         };
-    }, [history, primaryGoal, currentPhase]);
+    }, [history, selectedGoals, currentPhase]);
 
     const fetchData = useCallback(async () => {
         if (!user) return;
         setLoading(true);
         try {
+            // Fetch longer history for phase progression (last 30 days)
+            const thirtyDaysAgo = format(new Date(Date.now() - 30 * 24 * 60 * 60 * 1000), 'yyyy-MM-dd');
+            // Goals are assumed returned in the order they were inserted, or we can just rely on the array order.
+            // Supabase returns them by default order, we should ensure the order is kept. We can order by selected_at.
             const [goalsRes, completionsRes, historyRes] = await Promise.all([
-                supabase.from('user_goals').select('goal_id').eq('user_id', user.id),
+                supabase.from('user_goals').select('goal_id').eq('user_id', user.id).order('selected_at', { ascending: true }),
                 supabase.from('habit_completions').select('habit_id').eq('user_id', user.id).eq('completed_at', todayStr),
-                supabase.from('habit_completions').select('habit_id, completed_at').eq('user_id', user.id).gte('completed_at', format(new Date(Date.now() - 60 * 24 * 60 * 60 * 1000), 'yyyy-MM-dd'))
+                supabase.from('habit_completions').select('habit_id, completed_at').eq('user_id', user.id).gte('completed_at', thirtyDaysAgo)
             ]);
 
             if (goalsRes.data) setSelectedGoalsState(goalsRes.data.map(g => g.goal_id as CranumGoal));
@@ -83,6 +88,43 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
                     hist[c.completed_at].push(c.habit_id);
                 });
                 setHistory(hist);
+
+                // --- PHASE PROGRESSION LOGIC ---
+                // We track "good days" (days with >3 completions, or simplified >80% logic).
+                // For a robust implementation, we just count how many unique days in the last 14 days had at least 3 habits done.
+                // If they have 10+ compliant days in the last 14, they unlock Phase 2.
+                // If they have 20+ compliant days in the last 30, they unlock Phase 3.
+
+                const fourteenDaysAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);
+                let compliantDays14 = 0;
+                let compliantDays30 = 0;
+
+                Object.entries(hist).forEach(([dateStr, habits]) => {
+                    // We consider 3+ habits a "compliant" foundational day
+                    if (habits.length >= 3) {
+                        compliantDays30++;
+                        if (new Date(dateStr) >= fourteenDaysAgo) {
+                            compliantDays14++;
+                        }
+                    }
+                });
+
+                let newPhase: CranumPhase = 1;
+                let required = 10; // Days needed for Phase 2
+                let current = compliantDays14;
+
+                if (compliantDays30 >= 20) {
+                    newPhase = 3;
+                    required = 20;
+                    current = compliantDays30;
+                } else if (compliantDays14 >= 10) {
+                    newPhase = 2;
+                    required = 20; // Next goal is Phase 3
+                    current = compliantDays30;
+                }
+
+                setCurrentPhase(newPhase);
+                setPhaseProgress({ currentStreak: current, requiredDays: required });
             }
         } catch (error) {
             console.error('Error fetching habit data:', error);
@@ -112,16 +154,24 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
         }
     };
 
-    const toggleGoal = async (goalId: CranumGoal) => {
-        if (!user) return;
-        const isSelected = selectedGoals.includes(goalId);
+    const setGoalsHierarchy = async (goals: CranumGoal[]) => {
+        if (!user || goals.length > 3) return;
 
-        if (isSelected) return; // Cannot deselect the only primary goal
+        setSelectedGoalsState(goals);
 
-        // Clear existing and set new primary target
-        setSelectedGoalsState([goalId]);
         await supabase.from('user_goals').delete().eq('user_id', user.id);
-        await supabase.from('user_goals').insert([{ user_id: user.id, goal_id: goalId }]);
+
+        if (goals.length > 0) {
+            // Insert one by one to ensure ascending selected_at, 
+            // or just use a small delay if needed. But array insert works.
+            const inserts = goals.map((g, i) => ({
+                user_id: user.id,
+                goal_id: g,
+                // Add tiny offset to ensure sort order
+                selected_at: new Date(Date.now() + i * 1000).toISOString()
+            }));
+            await supabase.from('user_goals').insert(inserts);
+        }
     };
 
     const completionRate = useMemo(() => {
@@ -151,10 +201,11 @@ export function HabitProvider({ children }: { children: React.ReactNode }) {
         todayPlan,
         warnings,
         currentPhase,
+        phaseProgress,
         primaryGoal,
         stats,
         toggleHabit,
-        toggleGoal,
+        setGoalsHierarchy,
         setSelectedGoals: setSelectedGoalsState,
         completionRate
     };

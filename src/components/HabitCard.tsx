@@ -44,8 +44,18 @@ export function HabitCard({
               Reminder
             </span>
           )}
+          {habit.phase === 1 && (
+            <span className="text-[9px] font-black bg-blue-500/10 text-blue-500 px-2 py-0.5 rounded-full uppercase tracking-tighter">
+              Foundation
+            </span>
+          )}
+          {habit.fatigueCost && habit.fatigueCost >= 5 && (
+            <span className="text-[9px] font-black bg-orange-500/10 text-orange-500 px-2 py-0.5 rounded-full uppercase tracking-tighter">
+              High Load
+            </span>
+          )}
           {habit.durationMinutes !== undefined && !isContinuous && (
-            <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
+            <div className="flex items-center gap-1 text-[10px] text-muted-foreground mr-auto">
               <Clock size={10} />
               <span className="text-[10px] font-medium tracking-widest text-[#999] uppercase">
                 {habit.durationMinutes > 0 ? `${habit.durationMinutes} min` : 'During Meals'}

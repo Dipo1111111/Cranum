@@ -17,6 +17,12 @@ export interface BiologicalStack {
   habitIds: string[]; // Sequential habits
 }
 
+export interface TechniqueBlueprint {
+  howTo: string[];
+  whyItMatters: string;
+  commonMistakes?: string;
+}
+
 export interface CranumHabit {
   id: string;
   category: CranumCategory;
@@ -39,6 +45,9 @@ export interface CranumHabit {
   fatigueCost?: number; // 1-10 scale
   recoveryTimeHours?: number; // How long until safe to train again
   muscleGroup?: 'masseters' | 'neck' | 'cns' | 'fascia' | 'lymphatic';
+
+  // Tactical Information
+  blueprint?: TechniqueBlueprint;
 }
 
 

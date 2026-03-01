@@ -13,7 +13,19 @@ const GOAL_INFO: Record<CranumGoal, { title: string; desc: string; color: string
 };
 
 export function GoalSelector() {
-    const { selectedGoals, toggleGoal, loading, warnings } = useHabitContext();
+    const { selectedGoals, setGoalsHierarchy, loading, warnings } = useHabitContext();
+
+    const handleToggle = (goalId: CranumGoal) => {
+        if (selectedGoals.includes(goalId)) {
+            // Deselect
+            setGoalsHierarchy(selectedGoals.filter(g => g !== goalId));
+        } else {
+            // Select up to 3
+            if (selectedGoals.length < 3) {
+                setGoalsHierarchy([...selectedGoals, goalId]);
+            }
+        }
+    };
 
     const getHabitCount = (goal: CranumGoal) => {
         return CRANUM_HABITS.filter(h => h.goals.includes(goal)).length;
@@ -32,9 +44,9 @@ export function GoalSelector() {
     return (
         <div className="space-y-6 pb-10">
             <div className="space-y-2">
-                <h2 className="text-sm font-black uppercase tracking-widest text-primary">Primary Target Selection</h2>
+                <h2 className="text-sm font-black uppercase tracking-widest text-primary">Target Selection</h2>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                    Select ONE primary goal to spearhead your progress. Our engine will prescribe a phased biological stack designed specifically for this target.
+                    Select up to 3 goals. Your first choice is the <strong>Spearhead</strong>—the engine will prescribe active routines for it. The others are <strong>Support</strong> targets, unlocking passive lifestyle habits.
                 </p>
             </div>
 
@@ -62,21 +74,27 @@ export function GoalSelector() {
                     return (
                         <button
                             key={goalId}
-                            onClick={() => toggleGoal(goalId)}
+                            onClick={() => handleToggle(goalId)}
+                            disabled={!isSelected && selectedGoals.length >= 3}
                             className={`
                 w-full text-left p-5 rounded-[2rem] border transition-all duration-300 relative overflow-hidden group
                 ${isSelected
                                     ? 'bg-card border-primary shadow-lg shadow-primary/5'
-                                    : 'bg-secondary/30 border-transparent hover:bg-secondary/50'}
+                                    : selectedGoals.length >= 3 ? 'bg-secondary/10 border-transparent opacity-50 cursor-not-allowed' : 'bg-secondary/30 border-transparent hover:bg-secondary/50'}
               `}
                         >
                             {isSelected && (
-                                <div className="absolute top-4 right-4 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
-                                    <Check size={14} />
+                                <div className="absolute top-4 right-4 flex items-center gap-2">
+                                    <span className="text-[10px] font-black uppercase tracking-widest text-primary bg-primary/10 px-2 py-1 rounded-full">
+                                        {selectedGoals.indexOf(goalId) === 0 ? 'Spearhead' : 'Support'}
+                                    </span>
+                                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-primary-foreground">
+                                        <Check size={14} />
+                                    </div>
                                 </div>
                             )}
 
-                            <div className="flex flex-col gap-1 relative z-10">
+                            <div className="flex flex-col gap-1 relative z-10 mt-2">
                                 <div className="flex items-center gap-2">
                                     <div className={`w-2 h-2 rounded-full ${info.color}`} />
                                     <span className="text-xs font-bold uppercase tracking-widest opacity-60">
