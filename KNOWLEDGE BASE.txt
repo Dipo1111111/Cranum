@@ -1,0 +1,166 @@
+CATEGORY A: ACTIVE HABITS (35 items)
+Repeatable actions you perform at specific times. Appear in TODAY tab (Morning/Night sections) with checkboxes.
+
+ID	Habit	Knowledge	Dos	Don'ts	Mechanisms	Goals	Frequency	Duration	Time of Day
+A001	Suction Mewing Practice	Tongue pressure guides maxilla upward/forward, supporting orbital bone. Only 1.7g force needed to move teeth. Tongue can generate 500-600g force. This is the foundation of all facial development.	1. Say "T" to place tongue tip behind teeth
+2. Smile wide, open eyes wide, swallow to create vacuum
+3. Keep swallowing until saliva is gone and suction holds	1. Don't actively push tongue
+2. Don't let tongue drop
+3. Don't mew part-time only	Tongue Posture, Maxilla Development	Hunter Eyes, Forward/Upward Facial Development, Hollow Cheeks, Jawline Definition	daily	1 min	morning
+A002	Chin Tucks Against Wall	Neck supports cranium; without a straight neck, the head cannot develop upward/forward. Strengthens SCM muscles and corrects forward head posture.	1. Stand against wall, feet 6" forward, entire back on wall
+2. Roll shoulders back
+3. Tuck chin to neck (make double chin), hold 5 seconds
+4. Repeat 30 times (5 sets of 6)	Don't rush; keep shoulders back	Cervical Support, Posture	Forward/Upward Facial Development, Hollow Cheeks, Grow Taller, Jawline Definition	daily	3 min	morning
+A003	Thumb Pulling Full Routine	Loosens fascia and decompresses cranial sutures so maxilla can respond to tongue pressure. NOT forcing bones apart – creating space.	1. Stand against wall, feet 6" forward, chin tucked
+2. Place thumbs on middle palate (not on teeth)
+3. Push upwards and outwards while resisting with chin
+4. Hold 8-12 sec until chin wants to rise, then stop resisting with neck and follow up with thumbs
+5. Repeat for 3 minutes, covering middle, front, and back palate positions	1. Don't use excessive force
+2. Don't thumb pull without chin tuck
+3. Don't hold static without follow-up	Sutural Decompression, Maxilla Development	Hunter Eyes, Forward/Upward Facial Development, Hollow Cheeks, Jawline Definition	daily	3 min	morning
+A004	Tongue‑tie Stretch	Loosens lingual frenulum for better tongue range, enabling proper mewing. Tongue is second most concentrated place of fascia.	1. Say "T" to place tongue on spot
+2. Push tongue back against finger resistance
+3. Hold 30 seconds, 2 sets	1. Don't push to failure
+2. Don't cause extreme pain	Tongue Mobility	Hunter Eyes, Forward/Upward Facial Development, Jawline Definition	daily	1 min	morning
+A005	Tongue Chewing (Mastic Gum)	Strengthens genioglossus/styloglossus muscles for stronger suction mewing and better tongue posture.	1. Use mastic gum (no xylitol)
+2. Chew slightly, then push gum against T‑spot with tongue tip repeatedly
+3. Do while working/idle	Avoid gums with xylitol	Tongue Strength	Hunter Eyes, Forward/Upward Facial Development, Hollow Cheeks, Jawline Definition	daily	10 min	throughout_day
+A006	Eye Resistance Training	Strengthens orbicularis oculi muscle around eyes to hold eyelids taut and more positively tilted. Creates illusion of Hunter eyes.	1. Pull eyelid sideways with finger
+2. Try to close eye against resistance
+3. 3 sets of 20 reps each eye	1. Don't train frontalis (raising eyebrows)
+2. Don't use UDD method	Orbicularis Oculi	Hunter Eyes	daily	2 min	night
+A007	Apply Castor Oil to Eyebrows	Thick, dark eyebrows create illusion of Hunter eyes and more developed eye area.	1. Apply castor oil or emu oil to eyebrows
+2. Massage gently	Don't overpluck	Eyebrow Enhancement	Hunter Eyes	daily	1 min	night
+A008	Morning Sun Exposure	Infrared light at low angles improves eyesight and circadian rhythm. Builds solar callus for better UV tolerance.	1. View sunrise for 30 minutes
+2. Bare feet on earth if possible	Don't wear sunglasses	Circadian Rhythm, Hormonal	Hunter Eyes, Grow Taller	daily	30 min	morning
+A009	Evening Sun Exposure	Sunset light supports melatonin production and fascial relaxation.	1. View sunset for 30 minutes	Don't stare at intense sun	Circadian Rhythm	Hunter Eyes	daily	30 min	evening*
+A010	Palate Massage	Loosens palatal fascia so sutures can decompress. Prepares for thumb pulling.	1. Stand against wall, chin tucked
+2. Thumbs along palate edges, back to front, firm pressure (8.5/10)
+3. Repeat for 1-2 minutes	Don't touch soft palate	Fascia Release	Hunter Eyes, Forward/Upward Facial Development, Hollow Cheeks	daily	1-2 min	morning
+A011	Zygo Pulling	Releases tension at zygomatic maxillary suture. Stores lots of epicial fascial tension.	1. Thumbs inside mouth under cheekbones
+2. Massage upwards and outwards until soreness reduces	Don't rush	Fascia Release	Hunter Eyes, Forward/Upward Facial Development, Hollow Cheeks	as needed	1-2 min	morning
+A012	Cobra Pose	Opens front line and chest before cranial work. Prevents relapse by releasing whole body tension.	1. Lie face down
+2. Press up, open chest
+3. Hold 30-60 seconds with deep breathing	Don't rush	Full Body Fascia	Forward/Upward Facial Development	daily	1 min	morning
+A013	Forward Fold	Releases superficial back line. Fascia connects entire body; tension anywhere pulls on skull.	1. Fold forward from hips
+2. Relax neck, let head hang
+3. Hold 30-60 seconds	Don't bounce	Full Body Fascia	Forward/Upward Facial Development	daily	1 min	morning
+A014	Neck/Shoulder Retraction	Corrects forward head posture before cranial work. Aligns deep front line.	1. Pull shoulders back
+2. Lengthen neck
+3. Look up, hold 10 seconds	Don't skip	Full Body Fascia	Forward/Upward Facial Development	daily	1 min	morning
+A015	Neck Curls (Weighted)	Strengthens posterior chain to support head and maintain height gains.	1. Lie off bench edge
+2. Extend neck with or without weight
+3. Keep tongue on palate
+4. 3 sets of 10-12 reps	Don't use improper form	Cervical Strength	Forward/Upward Facial Development, Grow Taller, Jawline Definition	2-3x weekly	5 min	morning
+A016	Frown While Chewing	Frowning deactivates buccinator muscles (cheek muscles you DON'T want) and forces masseter engagement.	1. Frown
+2. Bite down and chew
+3. Feel masseters engage	Don't engage buccinators	Masseter Activation	Hollow Cheeks, Jawline Definition	daily	during meals	throughout_day
+A017	Front‑Teeth Chewing Practice	Builds mind‑muscle connection with masseters before full chewing.	1. Chew with front teeth only for 2-3 minutes
+2. Learn how masseters feel	Don't rush to full chewing	Masseter Activation	Hollow Cheeks	daily	2-3 min	morning
+A018	Forward Jaw Rolling	Advanced chewing technique for better masseter engagement and mandible development.	1. Bite down
+2. Slowly roll lower jaw forward against back teeth
+3. Feel masseter activation	Don't chew with jaw retracted	Masseter Activation	Hollow Cheeks, Jawline Definition	daily	during meals	throughout_day
+A019	Mastic Gum Chewing	Hypertrophies masseters for wider jaw and more defined hollows.	1. Use mastic gum
+2. Chew forward and bilaterally
+3. Equal time both sides	Don't overdo (risk of TMJ)	Masseter Hypertrophy	Hollow Cheeks, Jawline Definition	daily	10-15 min	throughout_day
+A020	CPS Exercise (Fish Face Pop)	Strengthens orbicularis oris muscle, which creates the hollow contrast. Weak orbicularis oris = no hollows.	1. Suck cheeks in (fish face)
+2. Make loudest popping sound possible
+3. 2 sets of 10 reps	Don't skip	Buccinator Deactivation	Hollow Cheeks	daily	1 min	morning
+A021	Apply Zygomatic Tape	Creates upward tension on zygomaticus muscles; activates correct muscles subconsciously. Trains SMAS.	1. Apply tape from edge of lips to ears
+2. Sleep on side	Don't sleep without tape	Zygomaticus Activation	Hunter Eyes, Forward/Upward Facial Development, Hollow Cheeks	daily	1 min	night
+A022	Big 6 Lymphatic Exercise	Releases interstitial fluid stuck in face. Fluid retention masks hollows even when lean.	1. Activate lymphatic points per routine
+2. Combine with sweating	Don't expect permanent results	Lymphatic Drainage	Hollow Cheeks	2-3x weekly	5 min	morning
+A023	Facial Massage (Gua Sha)	Releases interstitial fluid temporarily. Same effect as gua sha.	1. Apply tallow/moisturizer
+2. Thumb from nose bridge to ear along cheekbone	Don't expect bone changes	Lymphatic Drainage	Hollow Cheeks	as needed	2 min	night
+A024	Sauna or Hot Bath	Sweating releases interstitial fluid; heat loosens fascia for better bone work.	1. 10-20 min sauna or hot bath
+2. Exercise to sweat if no access	Don't overdo	Lymphatic Drainage, Fascia Release	Hollow Cheeks, Grow Taller	1-2x weekly	15 min	as available
+A025	24h Fast + Sprint Combo	GH and IGF‑1 are antagonistic; need to spike GH first (fasting/sprinting) THEN IGF‑1 (sugars). Maximizes growth axis.	1. Fast 24h (lunch to lunch)
+2. Sprint fasted 6x20 sec, 1 min rest
+3. Break fast with high natural sugar meal	Don't do intermittent fasting (<24h)	Hormonal (IGF‑1)	Hollow Cheeks, Grow Taller	1x weekly	24h + sprints	Sunday
+A026	Consume Colostrum	Most bioavailable source of IGF‑1. Supports bone growth.	1. Raw colostrum ideally
+2. Add to yogurt bowl	Don't buy other "bone supplements"	Hormonal (IGF‑1)	Hollow Cheeks, Grow Taller	daily	1 min	morning
+A027	Grounding Session	Reduces EMF effects, resets nervous system, lowers inflammation.	1. Barefoot on earth (grass, soil, sand)
+2. 10+ minutes
+3. Get sunlight simultaneously	Don't wear shoes	Nervous System, Hormonal (DHT)	Hollow Cheeks, Grow Taller	daily	10 min	throughout_day
+A028	24h Weekly Fast	Creates weekly caloric deficit without chronic stress. Daily restriction raises cortisol which kills hormones.	1. Eat as you want 6 days
+2. Fast 24-36h one day	Don't do daily calorie restriction	Body Composition	Hollow Cheeks	1x weekly	24-36h	Sunday
+A029	Back Extensions	Corrects anterior pelvic tilt, which compresses spine and reduces height.	1. Weighted back extensions
+2. 3 sets of 10-15 reps	Don't use momentum	Pelvic Posture	Grow Taller	daily	5 min	morning
+A030	Hip Bridges	Strengthens glutes to correct APT.	1. Assisted hip bridges/lifts
+2. 3 sets of 15 reps	Don't overarch lower back	Pelvic Posture	Grow Taller	daily	3 min	morning
+A031	Isometric Neck Holds	Prepares for weighted neck work.	1. Against wall, 10 seconds each direction
+2. Progress to neck curls	Don't skip basics	Neck Strength	Grow Taller	daily	2 min	morning
+A032	Spike Ball Rolling	Releases adhesions in fascia that pull skeleton down.	1. Roll thoracic spine
+2. Feet
+3. Hamstrings
+4. Calves
+5. Glutes
+6. Back	Don't just roll once	Fascia Release	Grow Taller	daily	10 min	morning
+A033	Barefoot Sprinting	Ultimate fascial exercise; works all muscles in unison. Trains proper movement patterns.	1. Flex tendon, keep knee over toes
+2. Head upright, arms in motion
+3. Nasal breathing
+4. 6x20 sec sprints	Don't mouth breathe during training	Foot Foundation, Fascia Release	Grow Taller	1-2x weekly	5 min	morning
+A034	Apply Chin Tape (STTO)	Deactivates overactive mentalis muscle which causes dimpled/pebbled chin and can retrude chin.	1. X‑shaped tape on chin
+2. Sleep with it on	Don't let mentalis dominate	Mentalis Deactivation	Jawline Definition	daily	1 min	night
+A035	T‑spot Pressure Practice	Activates muscles that bring jaw forward. Instant feedback when done right.	1. Say "T" to find spot
+2. Push tongue hard on T‑spot
+3. Hold 5 seconds, feel jaw advance	Don't forget	Tongue Posture	Jawline Definition	continuous	reminders	throughout_day
+*Evening sun: place in "throughout_day" with a note.
+
+CATEGORY C: CONTINUOUS/POSTURAL HABITS (8 items)
+Ongoing awareness habits. Appear in REMINDERS tab as informational cards with no checkboxes.
+
+ID	Reminder	Reminder Text	Mechanisms	Goals
+C001	Maintain Suction Mewing	Keep tongue suctioned to palate throughout the day. Set hourly phone reminders. Your tongue is the natural retainer for all facial changes.	Tongue Posture	Hunter Eyes, Forward/Upward Facial Development, Hollow Cheeks, Jawline Definition
+C002	Avoid Raising Eyebrows	Keep eyebrows relaxed, neutral expression. Check in mirror throughout day. Overactive frontalis causes upper eyelid exposure and "scared" look.	Facial Expression	Hunter Eyes
+C003	Backwards Breathing	Breathe silently backwards (not up into chest). 4 seconds in, 6 seconds out. Nasal only. This relaxes fascia and nervous system.	Nasal Breathing, Nervous System	Forward/Upward Facial Development, Grow Taller, Jawline Definition
+C004	Walk Correctly	Walk with toes slightly in, heel out, tendon flexed, arch engaged. This activates spiral fascial pattern from toes to glutes.	Foot Foundation	Grow Taller
+C005	Consistent Posture Work	Maintain good posture throughout day. Use phone reminders. Chin slightly tucked, shoulders back, head aligned with spine.	Posture	Grow Taller
+C006	T‑spot Pressure	Push tongue on T‑spot whenever you remember. This activates muscles that advance the jaw.	Tongue Posture	Jawline Definition
+C007	Nasal Breathing	Breathe through nose only, mouth closed. Nasal breathing filters air, increases nitric oxide, and supports maxilla development.	Nasal Breathing	Forward/Upward Facial Development, Jawline Definition
+C008	Maintain Chin Tuck	Keep chin slightly tucked, head aligned with spine. This supports cranial base and prevents forward head posture.	Cervical Support	Forward/Upward Facial Development, Jawline Definition
+CATEGORY L: LIFESTYLE PRINCIPLES / ONE‑TIME FIXES (7 items)
+Foundational knowledge. Appear in LIBRARY tab as educational articles, never on daily checklist.
+
+ID	Principle	Explanation	Action Items	Goals
+L001	Reduce Xenoestrogen Exposure	Environmental estrogens disrupt hormones, close growth plates, and limit facial development. Phytoestrogens and xenoestrogens mimic estrogen, signaling premature growth plate fusion and reducing DHT.	1. Replace plastic containers with glass
+2. Wear natural fibers (cotton/linen/wool) – polyester leaks into skin when sweaty
+3. Use natural deodorant, no synthetic fragrances (cologne, shampoo)
+4. Install shower water filter
+5. Eat organic when possible
+6. Use egg yolk for shampoo	Hollow Cheeks, Grow Taller
+L002	Reduce EMF Exposure	EMF creates reactive oxygen species in Leydig cells, preventing testosterone production. Less T = less DHT = less bone growth.	1. Ground daily (barefoot on earth) 10+ min
+2. Keep phone away from body, use airplane mode at night
+3. Turn off WiFi at night
+4. Eat glutathione-rich foods (raw dairy, rare meat)
+5. Spend time in nature away from devices	Hollow Cheeks, Grow Taller
+L003	Natural Electrolyte Balance	Low‑sodium diets increase aldosterone → more sodium absorption + cortisol. Water retention isn't solved by low sodium.	1. Eat whole natural diet
+2. Use Celtic sea salt
+3. Eat fruit for potassium
+4. No electrolyte tablets
+5. Trust natural balance	Hollow Cheeks
+L004	Gut Health Foundation	Autoimmune issues and gut inflammation cause facial bloating masking hollows. Leaky gut leads to systemic inflammation.	1. Animal‑based diet (meat, fish, eggs, raw dairy if tolerated)
+2. Identify trigger foods (dairy, gluten, etc.)
+3. Consider elimination diet
+4. Eat fermented foods for microbiome	Hollow Cheeks
+L005	Get Lean (Hormone‑Safe)	Excess fat tissue is estrogen. More body fat = more estrogen = earlier growth plate closure and reduced DHT.	1. Maintain healthy weight
+2. Use weekly fasting (24-36h) not daily restriction
+3. Focus on body composition, not just weight
+4. Prioritize protein and nutrient density	Hollow Cheeks, Grow Taller
+L006	Fix Anterior Pelvic Tilt (RSS Protocol)	APT compresses spine, reducing height by up to 1-2 inches. Creates excessive lumbar lordosis crushing discs.	1. Release: roll posterior chain with spike ball
+2. Stretch: hip flexor stretches (quad stretch, lunges)
+3. Strengthen: glute exercises (hip thrusts, back extensions)
+4. Perform daily	Grow Taller
+L007	Fix Bowleggedness (if applicable)	Bowlegs reduce height and cause asymmetry.	1. Consult guide for specific exercises
+2. Focus on external hip rotation and strengthening
+3. May require professional assessment	Grow Taller
+SUMMARY
+Active Habits: 35 items – for daily/weekly scheduling in TODAY tab.
+
+Continuous Habits: 8 items – reminders in REMINDERS tab.
+
+Lifestyle Principles: 7 items – educational in LIBRARY tab.
+
+Total unique knowledge items: 50 (all original content preserved, duplicates merged).
+
+Every mechanism, every "why it works," every do/don't, and every tip is intact. Nothing was removed – only reorganized for clarity and usability.
